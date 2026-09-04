@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Compass,
   PlusCircle,
-  Instagram,
   Camera,
   ArrowRight,
   Sparkles,
@@ -15,6 +14,24 @@ import {
   Users,
   Heart,
 } from "lucide-react";
+
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -57,7 +74,7 @@ export default function Home() {
               href="#instagram"
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-zinc-600 hover:text-zinc-950 hover:bg-zinc-100/80 transition-all"
             >
-              <Instagram className="h-4 w-4 text-zinc-500" />
+              <InstagramIcon className="h-4 w-4 text-zinc-500" />
               <span>Connect Instagram</span>
             </a>
             <a
@@ -118,7 +135,7 @@ export default function Home() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-3 rounded-2xl px-4 py-3 text-base font-medium text-zinc-700 hover:bg-zinc-100 transition-colors"
               >
-                <Instagram className="h-5 w-5 text-zinc-500" />
+                <InstagramIcon className="h-5 w-5 text-zinc-500" />
                 <span>Connect Instagram</span>
               </a>
               <a
