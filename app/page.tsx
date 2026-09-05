@@ -306,7 +306,7 @@ export default function Home() {
                 </h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                 {curatedTopEvents.map((event) => (
                   <EventCard
                     key={event.id}
@@ -351,7 +351,7 @@ export default function Home() {
               </div>
 
               {exploreMoreEvents.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
                   {exploreMoreEvents.map((event) => (
                     <EventCard
                       key={event.id}
